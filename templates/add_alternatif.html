@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Alternatif</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Tambah Alternatif Baru</h1>
+    <form action="/save_alternatif" method="post">
+        <label for="alternatif">Nama Alternatif:</label>
+        <input type="text" id="alternatif" name="alternatif" required><br>
+
+        <label for="c_to_c">Laju Pertumbuhan Kumulatif (c-to-c):</label>
+        <input type="number" id="c_to_c" name="c_to_c" step="0.01" required><br>
+
+        <label for="q_to_q">Laju Pertumbuhan Triwulanan Berantai (q-to-q):</label>
+        <input type="number" id="q_to_q" name="q_to_q" step="0.01" required><br>
+
+        <label for="y_on_y">Laju Pertumbuhan Triwulanan terhadap Triwulan yang Sama Tahun Sebelumnya (y-on-y):</label>
+        <input type="number" id="y_on_y" name="y_on_y" step="0.01" required><br>
+
+        <label for="inflasi">Inflasi:</label>
+        <input type="number" id="inflasi" name="inflasi" step="0.01" required><br>
+
+        <label for="pengangguran">Pengangguran:</label>
+        <input type="number" id="pengangguran" name="pengangguran" step="0.01" required><br>
+
+        <button type="submit">Tambah Alternatif</button>
+    </form>
+
+</body>
+</html>

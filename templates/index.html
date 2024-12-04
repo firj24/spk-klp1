@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Perankingan</title>
+    <style>
+    .data {
+        width: 100%;
+        border-collapse: collapse;
+        }
+        .data th, .data td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Hasil Perankingan</h1>
+
+
+    <h2>Tabel Perankingan</h2>
+    {% for table in tables %}
+        {{ table | safe }}
+    {% endfor %}
+
+
+    <h2>Detail Perankingan dan Bobot</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Alternatif</th>
+                <th>Nilai V</th>
+                <th>Peringkat</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in results %}
+            <tr>
+                <td>{{ row.Alternatif }}</td>
+                <td>{{ row.Nilai_V }}</td>
+                <td>{{ row.Peringkat }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Bobot Kriteria</h2>
+    <ul>
+    {% for i in range(kriteria|length) %}
+        <li>{{ kriteria[i] }}: {{ bobot[i] }}</li>
+    {% endfor %}
+    </ul>
+
+
+
+
+</body>
+</html>

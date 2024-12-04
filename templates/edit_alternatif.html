@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Alternatif</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <h1>Edit Alternatif</h1>
+
+    <form action="{{ url_for('edit_alternatif', index=index) }}" method="POST">
+        <label for="alternatif">Alternatif:</label>
+        <input type="text" name="alternatif" value="{{ alternative['alternatif'] }}" required><br>
+
+        <label for="c_to_c">Laju Pertumbuhan Kumulatif (c-to-c):</label>
+        <input type="number" step="any" name="c_to_c" value="{{ alternative['Laju Pertumbuhan Kumulatif (c-to-c)'] }}" required><br>
+
+        <label for="q_to_q">Laju Pertumbuhan Triwulanan Berantai (q-to-q):</label>
+        <input type="number" step="any" name="q_to_q" value="{{ alternative['Laju Pertumbuhan Triwulanan Berantai (q-to-q)'] }}" required><br>
+
+        <label for="y_on_y">Laju Pertumbuhan Triwulanan terhadap Triwulan yang Sama Tahun Sebelumnya (y-on-y):</label>
+        <input type="number" step="any" name="y_on_y" value="{{ alternative['Laju Pertumbuhan Triwulanan terhadap Triwulan yang Sama Tahun Sebelumnya (y-on-y)'] }}" required><br>
+
+        <label for="inflasi">Inflasi:</label>
+        <input type="number" step="any" name="inflasi" value="{{ alternative['Inflasi'] }}" required><br>
+
+        <label for="pengangguran">Pengangguran:</label>
+        <input type="number" step="any" name="pengangguran" value="{{ alternative['Pengangguran'] }}" required><br>
+
+        <button type="submit">Simpan Perubahan</button>
+    </form>
+
+    <br><br>
+    <div class="button-container">
+        <a href="{{ url_for('manage_alternatif') }}">Kembali</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+Umum
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #444;
+    font-size: 2rem;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+input[type="text"], input[type="number"], input[type="file"], button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Tabel Hasil */
+.data {
+    margin: 30px auto;
+    width: 90%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.data th, .data td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.data th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+.data td {
+    text-align: center;
+}
+
+.data tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Container untuk tombol */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;  /* Memberikan jarak di atas */
+    padding: 10px;
+}
+
+/* Link Kembali dan Tambah Alternatif */
+a {
+    display: inline-block;
+    text-align: center;
+    margin: 10px auto; /* Menjaga jarak antar tombol */
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Mengatur lebar tombol agar sesuai */
+}
+
+a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+a:active {
+    transform: translateY(2px);
+}
